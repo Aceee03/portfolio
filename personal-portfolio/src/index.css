@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+      font-family: "Space Grotesk", "sans-serif";
+}
+
+body {
+    background-color: #fdfeff;
+    overflow-x: hidden;
+}
+}
+
+@layer components{
+    .btn-ghost{
+      @apply text-white hover:duration-150 duration-150 hover:bg-gray-800 px-3 py-1 rounded-sm
+    }
+
+    .primary{
+      background-color: #141414 ;
+    }
+
+    .secondary{
+      background-color: #242424 ;
+    }
+
+    .green{
+      color: #3cd092 ;
+    }
+
+    .bg-green{
+      background-color: #3cd092;
+    }
+    
+    .title{
+      @apply lg:text-5xl text-4xl font-bold text-white
+    }
+
+    .img-black {
+      filter: invert(1)
+  }  
+  }
+  
