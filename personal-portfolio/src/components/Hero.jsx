@@ -11,7 +11,7 @@ const Hero = () => {
           className="h-28 lg:h-36 absolute -left-64 lg:-left-32 lg:top-48"
         />
         <div className="flex flex-col lg:flex-row-reverse gap-8">
-          <div className="bg-gradient-to-t from-[#242424] lg:w-96 w-48 place-self-center">
+          <div className="bg-gradient-to-t from-black lg:w-96 w-48 place-self-center">
             <img src={WadieImage} alt="wadie" className="" />
           </div>
           <div className="flex flex-col lg: items-center text-center lg:my-32 lg:basis-1/2">
