@@ -12,7 +12,7 @@ const Footer = () => {
   });
 
   // Initialize EmailJS
-  emailjs.init(process.env.EMAILJS_PUBLIC_KEY);
+  emailjs.init();
 
   // Handle form value changes
   const handleChange = (e) => {
@@ -37,7 +37,7 @@ const Footer = () => {
       message: message,
     };
 
-    emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams).then(
+    emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, templateParams).then(
       (result) => {
         alert("Email sent successfully!");
         console.log("Email sent: ", result.text);
@@ -47,7 +47,7 @@ const Footer = () => {
       }
     );
   };
-
+  
   return (
     <>
       <div className="secondary relative flex flex-col lg:flex-row lg:justify-between px-8 py-8 lg:px-52 lg:py-16 mt-8">
