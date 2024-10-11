@@ -12,7 +12,7 @@ const Footer = () => {
   });
 
   // Initialize EmailJS
-  emailjs.init("Pg89oCj-OV3a5JgBq"); // Replace with your public key
+  emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
   // Handle form value changes
   const handleChange = (e) => {
@@ -37,7 +37,7 @@ const Footer = () => {
       message: message,
     };
 
-    emailjs.send("service_jgiwsy7", "template_aw54nli", templateParams).then(
+    emailjs.send(process.env.REACT_APP_EMAILJS_SERVICE_ID, process.env.REACT_APP_EMAILJS_TEMPLATE_ID, templateParams).then(
       (result) => {
         alert("Email sent successfully!");
         console.log("Email sent: ", result.text);
