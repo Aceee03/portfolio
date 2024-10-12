@@ -1,6 +1,7 @@
 import React from "react";
 import WadieImage from "../assets/wadie-no-bg.png";
 import patternRings from "../assets/pattern-rings.svg";
+import WadieBoumedieneResume from './../assets/WadieBoumedieneResume.pdf'
 
 const Hero = () => {
   return (
@@ -32,9 +33,9 @@ const Hero = () => {
             </p>
             {/* Download CV Button */}
             <a
-              href="/cv.pdf"
+              href={WadieBoumedieneResume}
               className="lg:place-self-start"
-              download="Wadie_Boumediene_CV.pdf"
+              download="WadieBoumedieneResume.pdf"
             >
               <button className="mt-8 hover:text-[#242424] hover:bg-green hover:duration-200 duration-200 text-white px-6 py-2 border border-[#3cd092]">
                 Download CV
