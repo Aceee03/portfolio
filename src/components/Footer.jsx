@@ -12,7 +12,7 @@ const Footer = () => {
   });
 
   // Initialize EmailJS
-  emailjs.init();
+  emailjs.init(import.meta.env.VITE_PUBLIC_KEY);
 
   // Handle form value changes
   const handleChange = (e) => {
@@ -37,7 +37,7 @@ const Footer = () => {
       message: message,
     };
 
-    emailjs.send(import.meta.env.VITE_EMAILJS_SERVICE_ID, import.meta.env.VITE_EMAILJS_TEMPLATE_ID, templateParams).then(
+    emailjs.send(import.meta.env.VITE_SERVICE_ID, import.meta.env.VITE_TEMPLATE_ID, templateParams).then(
       (result) => {
         alert("Email sent successfully!");
         console.log("Email sent: ", result.text);
@@ -47,6 +47,7 @@ const Footer = () => {
       }
     );
   };
+
   
   return (
     <>
